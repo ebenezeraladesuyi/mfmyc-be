@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
-const userSchema = new mongoose_1.default.Schema({
+const workerSchema = new mongoose_1.default.Schema({
     firstName: {
         type: String,
         required: [true, "please enter your firstname"],
@@ -21,13 +21,17 @@ const userSchema = new mongoose_1.default.Schema({
         type: String,
         required: [true, "please enter your phone number"],
     },
+    departmentInChurch: {
+        type: String,
+        required: [true, "please enter department in church"],
+    },
+    maritalStatus: {
+        type: String,
+        required: [true, "please enter your marital status"],
+    },
     educationalQualification: {
         type: String,
         required: [true, "please enter your educational qualification"],
-    },
-    computerExperience: {
-        type: String,
-        required: [true],
     },
     address: {
         type: String,
@@ -46,5 +50,5 @@ const userSchema = new mongoose_1.default.Schema({
         required: [true, "please enter your emergency contact number"],
     },
 });
-const UserModel = mongoose_1.default.model("AllRegistered", userSchema);
-exports.default = UserModel;
+const workerModel = mongoose_1.default.model("AllWorkers", workerSchema);
+exports.default = workerModel;

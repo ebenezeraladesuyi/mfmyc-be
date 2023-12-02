@@ -8,8 +8,8 @@ const appConfig = (app: Application) => {
   app.use(express.json()).use(cors());
 
   //routes
-  app.use("/member" , memberRouter);
-  app.use("/worker" , workerRouter);
+  app.use("/api" , memberRouter);
+  app.use("/api" , workerRouter);
 
   app.get("/" , (req: Request , res:Response)=>{
     return res.status(200).json({

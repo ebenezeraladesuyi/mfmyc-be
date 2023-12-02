@@ -3,8 +3,8 @@ import { getAllWorkers, registerWorker } from "../controller/WorkerController";
 
 const workerRouter = express.Router()
 
-workerRouter.get("/registered" , getAllWorkers);
-workerRouter.post("/register", registerWorker);
+workerRouter.get("/worker/registered" , getAllWorkers);
+workerRouter.post("/worker/register", registerWorker);
 
 
 export default workerRouter;
