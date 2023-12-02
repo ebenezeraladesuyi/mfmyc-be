@@ -1,21 +1,20 @@
 import mongoose from "mongoose";
 
-interface user {
+interface member {
   firstName: string;
   surname : string;
   email: string;
   phoneNumber: string;
   educationalQualification : string;
-  computerExperience : string;
   address: string;
   emergencyContactName: string;
   emergencyContactRelationship: string;
   emergencyContactNumber: string;
 }
 
-interface Iuser extends user, mongoose.Document {}
+interface iMember extends member, mongoose.Document {}
 
-const userSchema = new mongoose.Schema({
+const memberSchema = new mongoose.Schema({
   firstName: {
     type: String,
     required: [true, "please enter your firstname"],
@@ -35,10 +34,6 @@ const userSchema = new mongoose.Schema({
   educationalQualification: {
     type: String,
     required: [true, "please enter your educational qualification"],
-  },
-  computerExperience: {
-    type: String,
-    required: [true],
   },
   address: {
     type: String,
@@ -60,6 +55,6 @@ const userSchema = new mongoose.Schema({
 });
 
 
-const UserModel = mongoose.model<Iuser>("AllRegistered" , userSchema)
+const memberModel = mongoose.model<iMember>("AllMembers" , memberSchema)
 
-export default UserModel
+export default memberModel

@@ -3,6 +3,7 @@ import dbConfig from "./config/db";
 import appConfig from "./app";
 
 const app: Application = express();
+// const app = express();
 appConfig(app)
 dbConfig()
 
