@@ -2,7 +2,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config()
 
-const uri = process.env.MONGOOSE_DB;
+// const uri = process.env.MONGOOSE_DB;
+const uri = "mongodb+srv://eben19:ebenezer19@cluster0.u3wri8y.mongodb.net/"
 
 
 const dbConfig = async (): Promise<void> => {

@@ -10,8 +10,8 @@ const WorkerRouter_1 = __importDefault(require("./routes/WorkerRouter"));
 const appConfig = (app) => {
     app.use(express_1.default.json()).use((0, cors_1.default)());
     //routes
-    app.use("/api", MemberRouter_1.default);
-    app.use("/api", WorkerRouter_1.default);
+    app.use("/member", MemberRouter_1.default);
+    app.use("/worker", WorkerRouter_1.default);
     app.get("/", (req, res) => {
         return res.status(200).json({
             message: "default get"
