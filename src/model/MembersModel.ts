@@ -37,7 +37,7 @@ const memberSchema = new mongoose.Schema({
     type: String,
     required: [true, "please enter your educational qualification"],
   },
-  datOfBirth: {
+  dateOfBirth: {
     type: String,
     required: [true, "please enter your date of birth"],
   },
