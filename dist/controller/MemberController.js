@@ -37,7 +37,7 @@ const MembersModel_1 = __importDefault(require("../model/MembersModel"));
 //register a user
 const registerMember = async (req, res) => {
     try {
-        const { firstName, surname, email, phoneNumber, educationalQualification, dateOfBirth, address, emergencyContactName, emergencyContactRelationship, emergencyContactNumber, } = req.body;
+        const { firstName, surname, email, phoneNumber, educationalQualification, dateOfBirth, maritalStatus, address, emergencyContactName, emergencyContactRelationship, emergencyContactNumber, } = req.body;
         const checkExist = await MembersModel_1.default.findOne({ email });
         if (checkExist) {
             return res.status(500).json({
@@ -52,6 +52,7 @@ const registerMember = async (req, res) => {
                 phoneNumber,
                 address,
                 dateOfBirth,
+                maritalStatus,
                 educationalQualification,
                 emergencyContactName,
                 emergencyContactRelationship,
