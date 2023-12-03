@@ -39,7 +39,7 @@ exports.getAllWorkers = getAllWorkers;
 //register a user
 const registerWorker = async (req, res) => {
     try {
-        const { firstName, surname, email, phoneNumber, departmentInChurch, maritalStatus, educationalQualification, address, emergencyContactName, emergencyContactRelationship, emergencyContactNumber, } = req.body;
+        const { firstName, surname, email, phoneNumber, departmentInChurch, maritalStatus, dateOfBirth, educationalQualification, address, emergencyContactName, emergencyContactRelationship, emergencyContactNumber, } = req.body;
         const checkExist = await WorkersModel_1.default.findOne({ email });
         if (checkExist) {
             return res.status(500).json({
@@ -54,6 +54,7 @@ const registerWorker = async (req, res) => {
                 phoneNumber,
                 departmentInChurch,
                 maritalStatus,
+                dateOfBirth,
                 educationalQualification,
                 address,
                 emergencyContactName,

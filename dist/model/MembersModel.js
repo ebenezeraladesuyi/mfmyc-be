@@ -25,6 +25,10 @@ const memberSchema = new mongoose_1.default.Schema({
         type: String,
         required: [true, "please enter your educational qualification"],
     },
+    datOfBirth: {
+        type: String,
+        required: [true, "please enter your date of birth"],
+    },
     address: {
         type: String,
         required: [true, "please enter your address"],

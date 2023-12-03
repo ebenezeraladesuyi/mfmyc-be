@@ -7,6 +7,7 @@ interface worker {
   phoneNumber: string;
   departmentInChurch: string;
   maritalStatus: string;
+  dateOfBirth: string;
   educationalQualification : string;
   address: string;
   emergencyContactName: string;
@@ -40,6 +41,10 @@ const workerSchema = new mongoose.Schema({
   maritalStatus: {
     type: String,
     required: [true, "please enter your marital status"],
+  },
+  dateOfBirth: {
+    type: String,
+    required: [true, "please enter your dat of birth"],
   },
   educationalQualification: {
     type: String,

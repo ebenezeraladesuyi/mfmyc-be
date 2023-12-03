@@ -6,6 +6,8 @@ interface member {
   email: string;
   phoneNumber: string;
   educationalQualification : string;
+  dateOfBirth: string;
+  maritalStatus: string;
   address: string;
   emergencyContactName: string;
   emergencyContactRelationship: string;
@@ -34,6 +36,10 @@ const memberSchema = new mongoose.Schema({
   educationalQualification: {
     type: String,
     required: [true, "please enter your educational qualification"],
+  },
+  datOfBirth: {
+    type: String,
+    required: [true, "please enter your date of birth"],
   },
   address: {
     type: String,

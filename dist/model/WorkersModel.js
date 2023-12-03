@@ -29,6 +29,10 @@ const workerSchema = new mongoose_1.default.Schema({
         type: String,
         required: [true, "please enter your marital status"],
     },
+    dateOfBirth: {
+        type: String,
+        required: [true, "please enter your dat of birth"],
+    },
     educationalQualification: {
         type: String,
         required: [true, "please enter your educational qualification"],
