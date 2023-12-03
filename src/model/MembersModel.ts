@@ -41,6 +41,10 @@ const memberSchema = new mongoose.Schema({
     type: String,
     required: [true, "please enter your date of birth"],
   },
+  maritalStatus: {
+    type: String,
+    required: [true, "please enter your marital status"],
+  },
   address: {
     type: String,
     required: [true, "please enter your address"],
