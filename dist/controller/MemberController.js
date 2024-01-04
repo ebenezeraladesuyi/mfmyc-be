@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.registerMember = void 0;
+exports.getAllMembers = exports.registerMember = void 0;
 const MembersModel_1 = __importDefault(require("../model/MembersModel"));
 // export const getAllUsers = async (req: Request, res: Response) => {
 //   try {
@@ -72,3 +72,20 @@ const registerMember = async (req, res) => {
     }
 };
 exports.registerMember = registerMember;
+// get all members
+const getAllMembers = async (req, res) => {
+    try {
+        const users = await MembersModel_1.default.find();
+        return res.status(200).json({
+            message: "gotten all members",
+            data: users,
+        });
+    }
+    catch (error) {
+        return res.status(400).json({
+            message: "failed to get all members",
+            data: error,
+        });
+    }
+};
+exports.getAllMembers = getAllMembers;

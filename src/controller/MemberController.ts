@@ -89,4 +89,21 @@ export const registerMember = async (req: Request, res: Response) => {
   }
 };
 
+// get all members
+export const getAllMembers = async (req: Request, res: Response) => {
+  try {
+    const users = await memberModel.find();
+
+    return res.status(200).json({
+      message: "gotten all members",
+      data: users,
+    });
+  } catch (error) {
+    return res.status(400).json({
+      message: "failed to get all members",
+      data: error,
+    });
+  }
+};
+
 

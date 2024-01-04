@@ -8,4 +8,5 @@ const MemberController_1 = require("../controller/MemberController");
 const memberRouter = express_1.default.Router();
 // userRouter.get("/registered" , getAllWorkers)
 memberRouter.post("/registermember", MemberController_1.registerMember);
+memberRouter.get("/allregisteredmembers", MemberController_1.getAllMembers);
 exports.default = memberRouter;
