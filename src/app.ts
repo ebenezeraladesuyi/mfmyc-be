@@ -3,6 +3,7 @@ import cors from "cors";
 import memberRouter from "./routes/MemberRouter";
 import workerRouter from "./routes/WorkerRouter";
 import dateRouter from "./routes/DateRoute";
+import swysRouter from "./routes/SwysRouter";
 
 
 const appConfig = (app: Application) => {
@@ -11,6 +12,7 @@ const appConfig = (app: Application) => {
   //routes
   app.use("/member" , memberRouter);
   app.use("/worker" , workerRouter);
+  app.use("/swys" , swysRouter);
   app.use("/date" , dateRouter);
 
 
