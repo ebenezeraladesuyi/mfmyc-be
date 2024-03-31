@@ -10,6 +10,7 @@ const WorkerRouter_1 = __importDefault(require("./routes/WorkerRouter"));
 const DateRoute_1 = __importDefault(require("./routes/DateRoute"));
 const SwysRouter_1 = __importDefault(require("./routes/SwysRouter"));
 const SwysSubscribeRouter_1 = __importDefault(require("./routes/SwysSubscribeRouter"));
+const UnveilingRoutes_1 = __importDefault(require("./routes/UnveilingRoutes"));
 const appConfig = (app) => {
     app.use(express_1.default.json()).use((0, cors_1.default)());
     //routes
@@ -18,6 +19,7 @@ const appConfig = (app) => {
     app.use("/swys", SwysRouter_1.default);
     app.use("/date", DateRoute_1.default);
     app.use("/subscribe", SwysSubscribeRouter_1.default);
+    app.use("/unveiling", UnveilingRoutes_1.default);
     app.get("/", (req, res) => {
         return res.status(200).json({
             message: "default get"

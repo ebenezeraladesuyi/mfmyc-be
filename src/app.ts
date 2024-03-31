@@ -5,6 +5,7 @@ import workerRouter from "./routes/WorkerRouter";
 import dateRouter from "./routes/DateRoute";
 import swysRouter from "./routes/SwysRouter";
 import swysSubscribeRouter from "./routes/SwysSubscribeRouter";
+import unveilingRouter from "./routes/UnveilingRoutes";
 
 
 const appConfig = (app: Application) => {
@@ -16,6 +17,7 @@ const appConfig = (app: Application) => {
   app.use("/swys" , swysRouter);
   app.use("/date" , dateRouter);
   app.use("/subscribe", swysSubscribeRouter)
+  app.use("/unveiling", unveilingRouter)
 
 
   app.get("/" , (req: Request , res:Response)=>{
