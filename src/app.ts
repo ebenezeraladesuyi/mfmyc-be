@@ -6,6 +6,7 @@ import dateRouter from "./routes/DateRoute";
 import swysRouter from "./routes/SwysRouter";
 import swysSubscribeRouter from "./routes/SwysSubscribeRouter";
 import unveilingRouter from "./routes/UnveilingRoutes";
+import DWCSubscribeRouter from "./routes/DWCrouterModel";
 
 
 const appConfig = (app: Application) => {
@@ -18,6 +19,7 @@ const appConfig = (app: Application) => {
   app.use("/date" , dateRouter);
   app.use("/subscribe", swysSubscribeRouter)
   app.use("/unveiling", unveilingRouter)
+  app.use("/dwcsub", DWCSubscribeRouter)
 
 
   app.get("/" , (req: Request , res:Response)=>{
