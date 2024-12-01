@@ -7,6 +7,7 @@ import swysRouter from "./routes/SwysRouter";
 import swysSubscribeRouter from "./routes/SwysSubscribeRouter";
 import unveilingRouter from "./routes/UnveilingRoutes";
 import DWCSubscribeRouter from "./routes/DWCrouterModel";
+import cacRouter from "./routes/CacRoutes";
 
 
 const appConfig = (app: Application) => {
@@ -20,6 +21,7 @@ const appConfig = (app: Application) => {
   app.use("/subscribe", swysSubscribeRouter)
   app.use("/unveiling", unveilingRouter)
   app.use("/dwcsub", DWCSubscribeRouter)
+  app.use("/cac", cacRouter)
 
 
   app.get("/" , (req: Request , res:Response)=>{
