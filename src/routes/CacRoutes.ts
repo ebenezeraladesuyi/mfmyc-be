@@ -3,8 +3,8 @@ import { getAllCac, registerCac } from "../controller/CacController";
 
 const cacRouter = express.Router();
 
-cacRouter.post("/registerunizik", registerCac);
-cacRouter.get("/getallunizik", getAllCac);
+cacRouter.post("/registercac", registerCac);
+cacRouter.get("/getallcac", getAllCac);
 
 export default cacRouter;
 
